@@ -1,0 +1,28 @@
+[package]
+name = "bevy_pipelines_ready"
+version = "0.8.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+description = "Bevy plugin for tracking render pipeline status."
+repository = "https://github.com/rparrett/bevy_pipelines_ready"
+homepage = "https://github.com/rparrett/bevy_pipelines_ready"
+documentation = "https://docs.rs/bevy_pipelines_ready"
+keywords = ["bevy", "gamedev"]
+categories = ["game-development"]
+readme = "README.md"
+exclude = [".github"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+webgl2 = ["bevy/webgl2"]
+webgpu = ["bevy/webgpu"]
+
+[dependencies.bevy]
+version = "0.18.0"
+default-features = false
+features = ["bevy_render"]
+
+[dev-dependencies.bevy]
+version = "0.18.0"
+default-features = true
